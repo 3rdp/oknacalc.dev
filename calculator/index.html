@@ -6,15 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="jquery-ui.min.css">
         <link rel="stylesheet" href="style.min.css">
-        <link rel="stylesheet" href="chosen.css">
+        <link rel="stylesheet" href="fonts.css">
+
 		
     </head>
     <body>
-        <div class="b-calc" style="height: 825px;">
+        <div class="b-calc">
 <div class="wrapper _s-grnd">
 <div class="b-calc__header">
-    <div style="font-size: 30px; text-align: center; color:black;">Оконный калькулятор</div>
-    <div style="font-size: 44px; text-align: center; text-shadow: 0 2px 0 rgba(255, 255, 255, 0.75); color:black;">Расчет стоимости окна c установкой</div>
+   
     <!--<p class="b-calc__header__1stline">Оконный калькулятор</p>
     <p class="b-calc__header__2ndline">Расчет стоимости окна c установкой</p>-->
 </div>
@@ -26,24 +26,24 @@
         <!--<img src="/img/logo-rehau.png" alt="Логотип"/>-->
     <!--</div>-->
     <div class="b-calc__option-row b-calc__menuwindow">
-        <header class="b-calc__materials__header">Выберите тип оконной конструкции</header>
+        <header class="b-calc__materials__header">Выберите тип оконной конструкции:</header>
         <ul class="b-calc__materials__btns">
             <li class="menuwindow__item b-calc__btn i-onefold" data-block="1-stvorka">
                 
-                <span>Одна створка</span></li>
+               
             <li class="menuwindow__item b-calc__btn i-twofold active" data-block="2-stvorka">
                 
-                <span>Две створки</span></li>
+                
             <li class="menuwindow__item b-calc__btn i-threefold" data-block="3-stvorka">
                 
-                <span>Три створки</span></li>
+                
             <li class="menuwindow__item b-calc__btn i-framuga" data-block="framuga">
                 
-                <span>Балконный блок</span></li>
+                </li>
         </ul>
     </div>
     <div class="b-calc__option-row b-calc__materials">
-        <header class="b-calc__materials__header">Выберите тип профильной системы</header>
+        <header class="b-calc__materials__header">Выберите тип профильной системы:</header>
         <ul class="b-calc__materials__btns">
             <li class="b-calc__materials__item b-calc__btn active" data-type="euroline">EUROLINE</li>
             <li class="b-calc__materials__item b-calc__btn" data-type="softline">SOFTLINE</li>
@@ -53,18 +53,18 @@
         <div class="clear"></div>
     </div>
     <div class="b-calc__option-row b-calc__otdelka">
-        <header class="b-calc__otdelka__header">Выберите вид отделки</header>
+        <header class="b-calc__otdelka__header">Выберите вид отделки:</header>
         <ul class="b-calc__materials__btns">
             <li class="b-calc__otdelka__item">
-                <div class="b-calc__otdelka__picture i-podokonnik" data-type="podokonnik"></div>
+               
                 <div class="b-calc__otdelka__text">Подоконник</div>
             </li>
             <li class="b-calc__otdelka__item">
-                <div class="b-calc__otdelka__picture i-otkos" data-type="otkos"></div>
+               
                 <div class="b-calc__otdelka__text">Откос</div>
             </li>
             <li class="b-calc__otdelka__item">
-                <div class="b-calc__otdelka__picture i-otliv" data-type="otliv"></div>
+                
                 <div class="b-calc__otdelka__text">Отлив</div>
             </li>
         </ul>
@@ -73,20 +73,12 @@
         <div class="b-total__text">Стоимость:
 
             <span class="b-total__output"></span>
-            p.
+            pуб.
         </div>
         <!-- <div class="b-total__icon btn-icon"></div> -->
     </div>
     <div class="b-zayavka">
-        <!--<form name="zayavka">-->
-            <!--<div class="b-zayavka__result"></div>-->
-            <!--<div class="b-zayavka__field">-->
-                <!--<input class="b-zayavka__input" name="contacts" type="text" placeholder="Телефон или e-mail">-->
-            <!--</div>-->
-        <!--</form>-->
-        <!--<div class="b-zayavka__btn">-->
-            <!--<a href="#" class="b-btn-green">Заказать звонок</a>-->
-        <!--</div>-->
+        <a href="" class="zayyavk">Оформить заявку</a>
 
     </div>
 </div>
@@ -128,16 +120,7 @@
                 <img class="img__absolute b-picture__arrow arrow-1 arrow-povorotnaya rotate-back" src="/img/others/arrow-flap.png" alt="Стрелочка" style="top: 135px; left: 30px;"/>
                 <img class="img__absolute b-picture__arrow arrow-1 arrow-otkidnaya" src="/img/others/arrow-flap.png" alt="Стрелочка" style="top: 22px; left: 175px;"/>
             </div>
-            <div class="picture__materials">
-                <div class="picture__materials__item active js-pic-mat-panel">
-                    <img class="img__absolute js-pic-mat-podokonnik" src="/img/windows/1-stvorka/podokonnik-panel.png" alt="Панельный подоконник"/>
-                    <img class="js-pic-mat-otkos" src="/img/windows/1-stvorka/panel.png" alt="Панельный каркас окна"/>
-                </div>
-                <div class="picture__materials__item js-pic-mat-brick">
-                    <img class="img__absolute js-pic-mat-podokonnik" src="/img/windows/1-stvorka/podokonnik-brick.png" alt="Кирпичный подоконник"/>
-                    <img class="js-pic-mat-otkos" src="/img/windows/1-stvorka/brick.png" alt="Кирпичный каркас окна"/>
-                </div>
-            </div>
+            
         </div>
     </div>
 </div>
@@ -191,16 +174,7 @@
             <img class="img__absolute b-picture__arrow arrow-2 arrow-povorotnaya rotate-back" src="/img/others/arrow-flap.png" alt="Стрелочка" style="top: 174px; left: 183px;"/>
             <img class="img__absolute b-picture__arrow arrow-2 arrow-otkidnaya" src="/img/others/arrow-flap.png" alt="Стрелочка" style="top: 22px; left: 230px;"/>
         </div>
-        <div class="picture__materials">
-            <div class="picture__materials__item active js-pic-mat-panel">
-                <img class="img__absolute js-pic-mat-podokonnik" src="/img/windows/framuga/podokonnik-panel.png" alt="Панельный подоконник"/>
-                <img class="js-pic-mat-otkos" src="/img/windows/framuga/panel.png" alt="Панельный каркас окна"/>
-            </div>
-            <div class="picture__materials__item js-pic-mat-brick">
-                <img class="img__absolute js-pic-mat-podokonnik" src="/img/windows/framuga/podokonnik-brick.png" alt="Кирпичный подоконник"/>
-                <img class="js-pic-mat-otkos" src="/img/windows/framuga/brick.png" alt="Кирпичный каркас окна"/>
-            </div>
-        </div>
+        
     </div>
 </div>
 <div class="b-settings__block" id="pic-3-stvorka">
@@ -272,16 +246,7 @@
             <img class="img__absolute b-picture__arrow arrow-3 arrow-povorotnaya rotate-back" src="/img/others/arrow-flap.png" alt="Стрелочка" style="top: 174px; left: 320px;"/>
             <img class="img__absolute b-picture__arrow arrow-3 arrow-otkidnaya" src="/img/others/arrow-flap.png" alt="Стрелочка" style="top: 22px; left: 362px;"/>
         </div>
-        <div class="picture__materials">
-            <div class="picture__materials__item active js-pic-mat-panel">
-                <img class="img__absolute js-pic-mat-podokonnik" src="/img/windows/3-stvorka/podokonnik-panel.png" alt="Панельный подоконник"/>
-                <img class="js-pic-mat-otkos" src="/img/windows/3-stvorka/panel.png" alt="Панельный каркас окна"/>
-            </div>
-            <div class="picture__materials__item js-pic-mat-brick">
-                <img class="img__absolute js-pic-mat-podokonnik" src="/img/windows/3-stvorka/podokonnik-brick.png" alt="Кирпичный подоконник"/>
-                <img class="js-pic-mat-otkos" src="/img/windows/3-stvorka/brick.png" alt="Кирпичный каркас окна"/>
-            </div>
-        </div>
+        
     </div>
 </div>
 <div class="b-settings__block" id="pic-framuga">
@@ -334,16 +299,7 @@
             <img class="img__absolute b-picture__arrow arrow-2 arrow-povorotnaya rotate-back" src="/img/others/arrow-flap.png" alt="Стрелочка" style="top: 220px; left: 192px;"/>
             <img class="img__absolute b-picture__arrow arrow-2 arrow-otkidnaya" src="/img/others/arrow-flap.png" alt="Стрелочка" style="top: 110px; left: 230px;"/>
         </div>
-        <div class="picture__materials">
-            <div class="picture__materials__item active js-pic-mat-panel">
-                <img class="img__absolute js-pic-mat-podokonnik" src="/img/windows/framuga/podokonnik-panel.png" alt="Панельный подоконник"/>
-                <img class="js-pic-mat-otkos" src="/img/windows/framuga/panel.png" alt="Панельный каркас окна"/>
-            </div>
-            <div class="picture__materials__item js-pic-mat-brick">
-                <img class="img__absolute js-pic-mat-podokonnik" src="/img/windows/framuga/podokonnik-brick.png" alt="Кирпичный подоконник"/>
-                <img class="js-pic-mat-otkos" src="/img/windows/framuga/brick.png" alt="Кирпичный каркас окна"/>
-            </div>
-        </div>
+        
     </div>
 </div>
 <!--<div class="b-settings__block" id="pic-balcony">-->
@@ -439,11 +395,7 @@
         </fieldset>
     </form>
 
-    <div class="message__attention">
-        * При расчете стоимости пластикового окна Онлайн калькулятором пластиковых окон могут не
-        учитываться сезонные скидки и акции, под которые вы возможно попадаете. Поэтому узнавайте точную стоимость у наших
-        операторов!
-    </div>
+   
 </div>
 </div>
 </div>
@@ -455,7 +407,6 @@
 
 <script src="jquery-ui.min.js"></script>
 
-<script src="chosen.jquery.js"></script>
 
 <script src="prices.js"></script>
 <script src="compile.js"></script>
