@@ -313,8 +313,23 @@ function s(string) {
 
         function sendAjax(set) {
             console.log(set)
-            
+            if (!set.sizes.vertical.length) set.sizes = {horizontal:"1500",vertical:"1300"};
+            var pricePerSquare = 1000;
+            var squareClass = function(h,w) {
+                this.h = h / 1000;
+                this.w = w / 1000;
+                this.getSquare = function() {
+                    return this.w * this.h;
+                }
+            };
+            var square = new squareClass(set.sizes.horizontal, set.sizes.vertical);
+            var price = Math.floor( pricePerSquare * square.getSquare() );
+
+
+            $result.html(price)
+
         }
+       
         setTimeout(function(){
             $menu_windows_links.filter('.active').trigger('click'); //todo Из-за того все слушатели событий инициализируются позже p.s. привет "архитектору"
         }, 1000);
