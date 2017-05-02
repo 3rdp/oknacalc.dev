@@ -240,7 +240,7 @@ function s(string) {
         /*Кнопки типа ОТДЕЛКА - откос, отлив, подоконник*/
         function OtdelkaBtns($el) {
             this.$el = $el;
-            this.$btns = $el.find('.b-calc__otdelka__picture');
+            this.$btns = $el.find('.b-calc__otdelka__item');
             this.current = [];
         }
 
