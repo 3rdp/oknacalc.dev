@@ -210,7 +210,7 @@ function s(string) {
         function MaterialsBtns($el) {
             this.$el = $el;
             this.$btns = $el.find('.b-calc__materials__item');
-            this.current = 'panel';
+            this.current = 'euroline';
         }
 
         MaterialsBtns.prototype.init = function () {
@@ -311,10 +311,19 @@ function s(string) {
 
         });
 
+        var priceList = CALCULATOR_PRICES; // копируем константу, в целях безопасности
+
         function sendAjax(set) {
             console.log(set)
             if (!set.sizes.vertical.length) set.sizes = {horizontal:"1500",vertical:"1300"};
-            var pricePerSquare = 1000;
+            var profile = set.material;
+            var win_type = [
+                '1-stvorka',
+                '2-stvorka',
+                '3-stvorka',
+                'framuga'
+            ].indexOf(set.win_type);
+            var pricePerSquare = priceList[profile][win_type];
             var squareClass = function(h,w) {
                 this.h = h / 1000;
                 this.w = w / 1000;
@@ -324,7 +333,6 @@ function s(string) {
             };
             var square = new squareClass(set.sizes.horizontal, set.sizes.vertical);
             var price = Math.floor( pricePerSquare * square.getSquare() );
-
 
             $result.html(price)
 
