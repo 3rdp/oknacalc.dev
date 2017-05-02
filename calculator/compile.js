@@ -314,7 +314,7 @@ function s(string) {
         var priceList = CALCULATOR_PRICES; // копируем константу, в целях безопасности
 
         function sendAjax(set) {
-            console.log(set)
+            s(set)
             if (!set.sizes.vertical.length) set.sizes = {horizontal:"1500",vertical:"1300"};
             var profile = set.material;
             var win_type = [
