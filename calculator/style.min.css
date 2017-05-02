@@ -1015,3 +1015,23 @@ box-shadow: 0px 1px 13px 2px rgba(121,119,119,0.54);
 .b-calc__otdelka li.active {
     border: 2px solid #777777;
 }
+
+.b-slider-vertical .ui-slider-handle:after {
+    content: '- ' attr(data-checked) ' мм';
+    position: relative;
+    top: -8px;
+    left: 24px;
+    font-size: 10px;
+    display: block;
+    width: 60px;
+}
+
+.b-slider-horizontal .ui-slider-handle:after {
+    content: attr(data-checked) ' мм';
+    position: relative;
+    top: -28px;
+    left: -10px;
+    font-size: 10px;
+    display: block;
+    width: 60px;
+}

@@ -401,11 +401,11 @@ function s(string) {
                     animate: true,
                     orientation: this.type,
                     slide: function (event, ui) {
-
                         if (!self.checkMin(ui.value)) {
                             return false;
                         }
 
+                        ui.handle.setAttribute('data-checked', ui.value);
                         self.$field.val(ui.value);
 
                     },
@@ -414,6 +414,7 @@ function s(string) {
                     }
                 })
                     .find('.ui-slider-handle')
+                    .attr('data-checked', self.init_range.val)
                     .wrap("<div class='ui-handle-helper'></div>");
 
                 this.initField();
