@@ -331,7 +331,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,secti
 .b-settings__right {
     float: right;
     margin-right: 50px;
-    margin-top: 75px
+    /* margin-top: 75px */
 }
 
 .b-calc__logo {
@@ -984,3 +984,7 @@ form.invalid .b-zayavka__result {
     width: 67px;
 }
 
+.b-calc__option-row {
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #aaa;
+}
