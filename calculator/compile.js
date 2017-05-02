@@ -338,9 +338,10 @@ function s(string) {
                     return this.w * this.h;
                 }
             };
+            // montazh logic
             var square = new squareClass(set.sizes.horizontal, set.sizes.vertical);
             var price = pricePerSquare * square.getSquare();
-
+            // otdelka logic
             if (set.otdelka.indexOf('podok') >= 0) {
                 price += square.w * priceList['otdelka'][0];
             }
@@ -350,7 +351,15 @@ function s(string) {
             if (set.otdelka.indexOf('otliv') >= 0) {
                 price += square.w * priceList['otdelka'][2];
             }
-
+            // stvorki logic
+            Object.keys(set.stvorki).forEach(function(prop) {
+                var type = set.stvorki[prop];
+                if (type == "povorotnaya") {
+                    price += priceList.stvorki.otkr;
+                } else if (type == "otkidnaya"){
+                    price += priceList.stvorki.otkid;
+                }
+            })
             $result.html(Math.floor(price))
 
         }
