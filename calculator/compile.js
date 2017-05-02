@@ -327,14 +327,31 @@ function s(string) {
             var squareClass = function(h,w) {
                 this.h = h / 1000;
                 this.w = w / 1000;
+                this.getPerimeter = function(type) {
+                    if(type == "otkos") {
+                        return this.h * 2 + this.w;
+                    } else {
+                        return this.h * 2 + this.w * 2;
+                    }
+                };
                 this.getSquare = function() {
                     return this.w * this.h;
                 }
             };
             var square = new squareClass(set.sizes.horizontal, set.sizes.vertical);
-            var price = Math.floor( pricePerSquare * square.getSquare() );
+            var price = pricePerSquare * square.getSquare();
 
-            $result.html(price)
+            if (set.otdelka.indexOf('podok') >= 0) {
+                price += square.w * priceList['otdelka'][0];
+            }
+            if (set.otdelka.indexOf('otkos') >= 0) {
+                price += square.getPerimeter('otkos') * priceList['otdelka'][1];
+            }
+            if (set.otdelka.indexOf('otliv') >= 0) {
+                price += square.w * priceList['otdelka'][2];
+            }
+
+            $result.html(Math.floor(price))
 
         }
        
