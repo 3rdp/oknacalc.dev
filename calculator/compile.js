@@ -467,6 +467,12 @@ function s(string) {
             };
 
             SlideSize.prototype.changeRange = function (data) {
+                $(this.$el)
+                    .find('.ui-handle-helper')
+                        .attr('data-minval', data['min'])
+                        .attr('data-maxval', data['max'])
+                    .find('.ui-slider-handle')
+                        .attr('data-checked', data['val'])
                 this.bottom_limit = data['min'];
                 this.$el.slider('option', {
                     'value': data['val'],

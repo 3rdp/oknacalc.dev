@@ -1041,3 +1041,37 @@ box-shadow: 0px 1px 13px 2px rgba(121,119,119,0.54);
     top: 0;
     left: 0;
 }
+
+
+
+.b-slider-vertical .ui-handle-helper:before {
+    content: attr(data-maxval) ' макс.';
+    top: -15px;
+    left: -17px;
+}
+
+.b-slider-vertical .ui-handle-helper:after {
+    content: attr(data-minval) ' мин.';
+    bottom: -15px;
+    left: -17px;
+}
+
+.b-slider-horizontal .ui-handle-helper:before {
+    content: attr(data-minval) ' мин.';
+    left:-20px;
+    top:20px;
+}
+
+.b-slider-horizontal .ui-handle-helper:after {
+    content: attr(data-maxval) ' макс.';
+    right: -30px;
+    top:20px;
+}
+
+.ui-handle-helper:before,
+.ui-handle-helper:after {
+	display: block;
+    font-size: 10px;
+    width: 60px;
+    position: absolute;
+}
