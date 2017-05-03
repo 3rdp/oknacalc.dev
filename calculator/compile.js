@@ -397,13 +397,14 @@ function s(string) {
                     step: 10,
                     range: 'min',
                     value: self.init_range['val'],
+                    min: self.init_range['min'],
                     max: self.init_range['max'],
                     animate: true,
                     orientation: this.type,
                     slide: function (event, ui) {
-                        if (!self.checkMin(ui.value)) {
-                            return false;
-                        }
+                        // if (!self.checkMin(ui.value)) {
+                        //     return false;
+                        // }
 
                         ui.handle.setAttribute('data-checked', ui.value);
                         self.$field.val(ui.value);
@@ -476,6 +477,7 @@ function s(string) {
                 this.bottom_limit = data['min'];
                 this.$el.slider('option', {
                     'value': data['val'],
+                    'min': data['min'],
                     'max': data['max']
                 });
                 this.$field.val(data['val']);
