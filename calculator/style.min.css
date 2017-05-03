@@ -40,9 +40,6 @@ a img {
     border: none
 }
 
-body {
-background-image: url(../img/background.jpg);		
-}
 
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {
     display: block
@@ -187,7 +184,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,secti
     font-size: 14px;
     text-align: center;
     margin-bottom: -78px;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 .menustvorka__item {
@@ -271,7 +268,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,secti
 
 .b-settings__right {
     float: right;
-    margin-top: 50px
+    margin-top: 20px
 }
 
 .b-calc__logo {
@@ -467,7 +464,7 @@ background-image: url(img/menuwindow__item/dec_3.jpg);
 .b-calc__otdelka {
 border-bottom: 1px dashed #757575;
     padding-bottom: 22px;
-    margin-bottom: 20px;		
+    margin-bottom: 10px;		
 }
 
 .b-calc__materials__item {
@@ -488,7 +485,7 @@ border-bottom: 1px dashed #757575;
 
 .b-calc__materials {
 border-bottom: 1px dashed #757575;
-    padding-bottom: 35px;
+    padding-bottom: 30px;
     margin-bottom: 20px;	
 }
 
@@ -522,7 +519,7 @@ border-bottom: 1px dashed #757575;
 }
 
 .b-calc__otdelka {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center
 }
 
@@ -540,9 +537,6 @@ border-bottom: 1px dashed #757575;
     display: inline-block
 }
 
-.b-calc__settings {
-    margin-top: 40px
-}
 
 .b-settings__blocks {
     display: inline-block
@@ -701,7 +695,7 @@ width: 18px;
     width: 6px;
     height: 300px;
     margin-left: 0px;
-    margin-top: 82px;
+    margin-top:50px;
 	border-radius:10px;
 }
 
