@@ -9,7 +9,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 html {
     line-height: 1;
-    font-family: "OpenSansRegular";	
+    font-family: "OpenSansRegular"; 
 }
 
 ol,ul {
@@ -148,7 +148,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,secti
 }
 
 .b-calc__menuwindow {
-	width:350px;
+    width:350px;
     text-align: center;
     /* text-transform: lowercase; */
 }
@@ -189,20 +189,20 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,secti
 
 .menustvorka__item {
     display: inline-block;
-	width:87px;
-	height:22px;
-	background:url(img/input.png) no-repeat center center;
+    width:87px;
+    height:22px;
+    background:url(img/input.png) no-repeat center center;
     position: relative;
-	text-align:center;
-	line-height:22px;
-	color:#3f3f3f;
-	font-size:13px;
+    text-align:center;
+    line-height:22px;
+    color:#3f3f3f;
+    font-size:13px;
     z-index: 5
-	
+    
 }
 
 .b-calc__menustvorka {
-	text-align:center;
+    text-align:center;
 }
 
 
@@ -218,7 +218,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,secti
 }
 
 .menustvorka__item {
-	margin-right:7px;
+    margin-right:7px;
 }
 
 .menustvorka__item:last-child {
@@ -235,12 +235,12 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,secti
     left: 0px;
     width: 150%;
     padding: 5px 0;
-	background:#e5e5e5;
+    background:#e5e5e5;
 }
 
 .menustvorka__submenu .submenu__item {
     padding: 5px 7px;
-	text-align:left;
+    text-align:left;
 }
 
 .menustvorka__submenu .submenu__item:hover {
@@ -301,13 +301,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,secti
     display: inline-block;
     font-size: 24px;
     color:#303030;
-	font-family: "OpenSansLight";
+    font-family: "OpenSansLight";
 }
 
 .b-total__output {
     font-size: 24px;
     color:#303030;
-	font-family: "OpenSansBold";
+    font-family: "OpenSansBold";
     display: inline-block;
     margin-left: 20px
 }
@@ -368,13 +368,13 @@ form.invalid .b-zayavka__result {
 
 .b-calc__materials {
     text-align: center;
-	width:350px;
+    width:350px;
 }
 
 .i-onefold {
     position: relative;
     top: -30px;
-}	
+}   
 
 .i-onefold::before {
     background-image: url(img/menuwindow__item/dec_1.jpg);
@@ -384,12 +384,12 @@ form.invalid .b-zayavka__result {
     background-position: center top;
     background-repeat: no-repeat;
     height: 70px;
-    display: inline-block;	
+    display: inline-block;  
 }
 
 .i-twofold {
     position: relative;
-    top: -30px;		
+    top: -30px;     
 }
 
 .i-twofold::before {
@@ -409,7 +409,7 @@ form.invalid .b-zayavka__result {
 }
 
 .b-calc__materials__btns .menuwindow__item.i-framuga {
-	margin-right:0px !important;
+    margin-right:0px !important;
 }
 
 .i-threefold::before {
@@ -425,7 +425,7 @@ background-image: url(img/menuwindow__item/dec_3.jpg);
 
 .i-threefold {
     position: relative;
-    top: -30px;		
+    top: -30px;     
 }
 
 .i-framuga::before {
@@ -437,7 +437,7 @@ background-image: url(img/menuwindow__item/dec_3.jpg);
     background-repeat: no-repeat;
     height: 100px;
     display: inline-block;
-	
+    
 }
 
 .b-calc__materials__header,.b-calc__otdelka__header {
@@ -452,7 +452,7 @@ background-image: url(img/menuwindow__item/dec_3.jpg);
     display: inline-block;
     color: #3f3f3f;
     font-size: 13px;
-	font-family: "OpenSansLight";
+    font-family: "OpenSansLight";
     height: 24px;
     line-height: 24px;
     text-decoration: none;
@@ -464,7 +464,7 @@ background-image: url(img/menuwindow__item/dec_3.jpg);
 .b-calc__otdelka {
 border-bottom: 1px dashed #757575;
     padding-bottom: 22px;
-    margin-bottom: 10px;		
+    margin-bottom: 10px;        
 }
 
 .b-calc__materials__item {
@@ -480,13 +480,13 @@ border-bottom: 1px dashed #757575;
 .b-calc__menuwindow {
 border-bottom: 1px dashed #757575;
     padding-bottom: 0px;
-    margin-bottom: 20px;	
+    margin-bottom: 20px;    
 }
 
 .b-calc__materials {
 border-bottom: 1px dashed #757575;
     padding-bottom: 30px;
-    margin-bottom: 20px;	
+    margin-bottom: 20px;    
 }
 
 .b-calc__materials__item:hover {
@@ -499,8 +499,8 @@ border-bottom: 1px dashed #757575;
 
 .b-calc__materials__item.active {
     text-decoration: none;
-	background:url(img/tip.png);
-    width: 85px;	
+    background:url(img/tip.png);
+    width: 85px;    
 }
 
 .b-calc__materials__item.active:hover {
@@ -558,7 +558,7 @@ border-bottom: 1px dashed #757575;
 }
 
 .b-settings__block {
-	margin-top: 90px;
+    margin-top: 90px;
 }
 
 
@@ -570,7 +570,7 @@ border-bottom: 1px dashed #757575;
     margin-left: 26px;
     position: relative;
     top: 5px;
-	display:none;
+    display:none;
 }
 
 .size-outputs fieldset {
@@ -656,7 +656,7 @@ border-bottom: 1px dashed #757575;
     margin-left: -10px;
     width: 300px;
     height: 6px;
-	border-radius: 10px;
+    border-radius: 10px;
 }
 
 .b-slider-horizontal .ui-handle-helper {
@@ -680,7 +680,7 @@ width: 18px;
     height: 6px;
     background: #777777;
     margin-top: 6px;
-    margin-left: 6px;	
+    margin-left: 6px;   
 }
 
 .picture__ramas {
@@ -696,7 +696,7 @@ width: 18px;
     height: 300px;
     margin-left: 0px;
     margin-top:50px;
-	border-radius:10px;
+    border-radius:10px;
 }
 
 .b-slider-vertical .ui-handle-helper {
@@ -714,7 +714,7 @@ width: 18px;
 }
 
 #pic-framuga {
-    margin-bottom: 20px;	
+    margin-bottom: 20px;    
 }
 
 .b-slider-vertical .ui-slider-handle::before {
@@ -724,7 +724,7 @@ width: 18px;
     height: 6px;
     background: #777777;
     margin-top: 6px;
-    margin-left: 6px;	
+    margin-left: 6px;   
 }
 
 .b-form {
@@ -1064,7 +1064,7 @@ box-shadow: 0px 1px 13px 2px rgba(121,119,119,0.54);
 
 .ui-handle-helper:before,
 .ui-handle-helper:after {
-	display: block;
+    display: block;
     font-size: 10px;
     width: 60px;
     position: absolute;
@@ -1075,7 +1075,7 @@ box-shadow: 0px 1px 13px 2px rgba(121,119,119,0.54);
 }
 
 .hidden-zag {
-	display:none;
+    display:none;
 }
 
 #dialog-form label {
@@ -1107,4 +1107,140 @@ box-shadow: 0px 1px 13px 2px rgba(121,119,119,0.54);
 #dialog-form .validateTips {
     border: 1px solid transparent;
     padding: 0.3em;
+}
+
+/* FROM css/stylesheet.css */
+/* для формы заказа в калькуляторе */
+.b1c-form { -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; border-radius: 3px; -moz-box-shadow: 0 5px 15px #4d4d4d; -webkit-box-shadow: 0 5px 15px #4d4d4d; box-shadow: 0 5px 15px #4d4d4d; display: none; text-align: left; position: absolute; margin: 0 auto; background: #fff; overflow: hidden; width: 400px; z-index: 1000; }
+
+.b1c-form .ui-dialog-titlebar {
+    color: #353535;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    font-family: "RobotoLight"; 
+    background: none;
+    border: none;
+}
+
+.b1c-fields {
+    padding: 30px 0px;  
+}
+
+.b1c-form input {
+    margin-bottom: 10px !important;
+    border: 1px solid #d1d1d1 !important;
+    width: 100% !important;
+    height: 37px !important;
+    border-radius: 3px !important;
+    line-height: 30px !important;
+    color: #666666 !important;
+    font-size: 14px !important;
+    padding-left: 5px !important;
+    outline: 0 !important;
+    box-sizing: border-bo !important;   
+}
+
+.b1c-fields .b1c-form-group:first-child input {
+    margin-bottom: 20px !important;
+}
+
+.b1c-title-name span {
+    display:block;
+}
+
+.b1c-form .ui-dialog-titlebar-close {
+    background: none;
+    border: none;
+    font-size: 37px;
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    float: right;
+    display: inline;
+    color: #353535;
+    text-shadow: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: normal;
+    margin-right: 20px;
+    margin-top: 10px;
+    right: -10px;
+    top: -10px;
+}
+
+.b1c-title-name {
+    padding: 0px 15px;  
+}
+
+.b1c-form .b1c-form-group {
+    padding: 0px 30px;  
+}
+
+.b1c-form .ui-dialog-buttonset button {
+    display: block;
+    background: #2ecc71;
+    color: #ffffff !important;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 37px;
+    line-height: 37px;
+    font-size: 18px;
+    font-family: "RobotoRegular";
+    border-radius: 3px;
+    margin-top: -20px !important;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 30px !important;
+}
+
+.b1c-cr > a {
+    display:none !important;
+}
+
+.b1c-submit-area {
+    padding: 0px 30px;
+}
+/* END css/stylesheet.css */
+
+.b1c-form .ui-dialog-buttonpane {
+    border:none;
+    float: right;
+    width: 340px;
+}
+
+.b1c-form .ui-dialog-buttonpane .ui-dialog-buttonset {
+    float:none;
+}
+
+.b1c-form .ui-icon-closethick {
+    font-family: "RobotoLight";
+    display:inline;
+    position: relative;
+    left: 0px;
+    margin: 0;
+    top: -10px;
+    font-size: 37px;
+    font-weight: normal;
+}
+
+.b1c-form .ui-icon-closethick:before {
+    content: '×';
+}
+
+.b1c-form .ui-dialog-titlebar-close {
+    top: -35px;
+    right: -12px;
+}
+
+.b1c-form .ui-state-highlight {
+    background: #2ECC71
+}
+
+.ui-widget-overlay {
+    background: none;
 }

@@ -510,25 +510,31 @@ function s(string) {
 (function($, w) {
     // модальное окно
     var dialog, form,
+        b1c_classes = { // нужен ui 1.12 чтоб заюзать classes
+            'ui-dialog' :           'b1c-form',
+            'ui-dialog-titlebar' :  'b1c-tl',
+            'ui-dialog-title' : 'b1c-title-name',
+            'ui-dialog-titlebar-close' : 'b1c-close'
+        },
         name = $("#name"),
         email = $("#email"),
         allFields = $([]).add(name).add(email),
         tips = $(".validateTips");
 
-    function updateTips(t) {
-        tips
-            .text(t)
-            .addClass("ui-state-highlight");
-        setTimeout(function() {
-            tips.removeClass("ui-state-highlight", 1500);
-        }, 500);
+    function updateTips(t, blink) {
+        var count = 0,
+            interval = setInterval(function() {
+                tips.toggleClass("ui-state-highlight", 50);
+                if (count++ >= 1) clearInterval(interval);
+            }, 50);
+        tips.text(t);
     }
 
     function checkLength(o, n, min, max) {
         if (o.val().length > max || o.val().length < min) {
             o.addClass("ui-state-error");
-            updateTips("Length of " + n + " must be between " +
-                min + " and " + max + ".");
+            updateTips("Длина поля '" + n + "' от " +
+                min + " до " + max + ".");
             return false;
         } else {
             return true;
@@ -549,8 +555,8 @@ function s(string) {
         var valid = true;
         allFields.removeClass("ui-state-error");
 
-        valid = checkLength(name, "username", 3, 16);
-        valid = checkLength(email, "email", 6, 16);
+        valid = valid && checkLength(name, "имя", 3, 16);
+        valid = valid && checkLength(email, "номер", 6, 16);
 
         // valid = checkRegexp(name, /^[a-z]([0-9a-z_\s])+$/i, "Username may consist of a-z, 0-9, underscores, spaces and must begin with a letter.");
         // valid = checkRegexp(email, emailRegex, "eg. ui@jquery.com");
@@ -563,24 +569,30 @@ function s(string) {
                 data: form.serialize(),
                 success: function() {
                     s(arguments);
+                    updateTips('Форма успешно отправлена.');
+                },
+                error: function() {
+                    updateTips('Нет соединения.');
                 }
             })
-            dialog.dialog("close");
         }
         return valid;
     }
 
     dialog = $("#dialog-form").dialog({
         autoOpen: false,
-        height: 400,
+        height: 350,
         width: 350,
         modal: true,
-        buttons: {
-            "OK": addUser,
-            Cancel: function() {
-                dialog.dialog("close");
+        draggable: false,
+        resizable: false,
+        dialogClass: "b1c-form",
+        buttons: [
+            {
+                text: "Отправить",
+                click: addUser
             }
-        },
+        ],
         close: function() {
             form[0].reset();
             allFields.removeClass("ui-state-error");
