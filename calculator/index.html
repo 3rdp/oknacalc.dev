@@ -18,8 +18,9 @@
     <!--<p class="b-calc__header__1stline">Оконный калькулятор</p>
     <p class="b-calc__header__2ndline">Расчет стоимости окна c установкой</p>-->
 </div>
-<div class="b-calc__body">
+<div class="b-calc__body b1c-good">
 <div class="b-calc__settings">
+<p class="b1c-name hidden-zag">Рассчет</p>
 <!--Правая часть блока настроек-->
 <div class="b-settings__right">
     <!--<div class="b-calc__logo">-->
@@ -404,10 +405,27 @@
 </div>
 </div>
 
+<div id="dialog-form" title="Оформить заявку">
+  <p class="validateTips">All form fields are required.</p>
+ 
+  <form>
+    <fieldset>
+      <label for="name">Имя</label>
+      <input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
+      <label for="email">Телефон</label>
+      <input type="text" name="email" id="email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
+      <input type="hidden" name="orderdata" id="orderdata">
+ 
+      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+    </fieldset>
+  </form>
+</div>
+
 <script src="jquery.js"></script>
 
 <script src="jquery-ui.min.js"></script>
-
+<script type="text/javascript" charset="utf-8" src="buyme/js/buyme.js"></script>
 
 <script src="prices.js"></script>
 <script src="compile.js"></script>

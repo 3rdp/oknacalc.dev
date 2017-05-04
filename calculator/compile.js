@@ -297,18 +297,13 @@ function s(string) {
                 set = {
                     sizes: {}
                 };
-
             set.sizes.horizontal = $size_horizontal.val();
             set.sizes.vertical = $size_vertical.val();
-
             set.material = materials.getValue(); 
             set.otdelka = otdelka.getArray();
-
             $.extend(set, menu_windows_links_array[index].getSet());
-
-
             sendAjax(set);
-
+            $("#orderdata").val(JSON.stringify(set))
         });
 
         var priceList = CALCULATOR_PRICES; // копируем константу, в целях безопасности
@@ -508,7 +503,103 @@ function s(string) {
             });
 
             //Сразу же и посчитаем
-            $d.trigger('send_settings');
+            $d.trigger('send_settings');  
         });
     });
 })(jQuery, window);
+(function($, w) {
+    // модальное окно
+    var dialog, form,
+        name = $("#name"),
+        email = $("#email"),
+        allFields = $([]).add(name).add(email),
+        tips = $(".validateTips");
+
+    function updateTips(t) {
+        tips
+            .text(t)
+            .addClass("ui-state-highlight");
+        setTimeout(function() {
+            tips.removeClass("ui-state-highlight", 1500);
+        }, 500);
+    }
+
+    function checkLength(o, n, min, max) {
+        if (o.val().length > max || o.val().length < min) {
+            o.addClass("ui-state-error");
+            updateTips("Length of " + n + " must be between " +
+                min + " and " + max + ".");
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function checkRegexp(o, regexp, n) {
+        if (!(regexp.test(o.val()))) {
+            o.addClass("ui-state-error");
+            updateTips(n);
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function addUser() {
+        var valid = true;
+        allFields.removeClass("ui-state-error");
+
+        valid = checkLength(name, "username", 3, 16);
+        valid = checkLength(email, "email", 6, 16);
+
+        // valid = checkRegexp(name, /^[a-z]([0-9a-z_\s])+$/i, "Username may consist of a-z, 0-9, underscores, spaces and must begin with a letter.");
+        // valid = checkRegexp(email, emailRegex, "eg. ui@jquery.com");
+
+        if (valid) {
+            $.ajax({
+                method: 'POST',
+                // url: '/sendmail.php',
+                url: 'http://okna.randols.ru/sendmail.php',
+                data: form.serialize(),
+                success: function() {
+                    s(arguments);
+                }
+            })
+            dialog.dialog("close");
+        }
+        return valid;
+    }
+
+    dialog = $("#dialog-form").dialog({
+        autoOpen: false,
+        height: 400,
+        width: 350,
+        modal: true,
+        buttons: {
+            "Create an account": addUser,
+            Cancel: function() {
+                dialog.dialog("close");
+            }
+        },
+        close: function() {
+            form[0].reset();
+            allFields.removeClass("ui-state-error");
+        },
+        open: function(e, ui) { 
+            $('.ui-widget-overlay').bind('click', function()
+            { 
+                dialog.dialog('close'); 
+            }); 
+        }
+    });
+
+    form = dialog.find("form").on("submit", function(e) {
+        e.preventDefault();
+        addUser();
+    });
+ 
+    $( ".zayyavk" ).button().on( "click", function(e) {
+        e.preventDefault();
+        dialog.dialog( "open" );
+    });
+})(jQuery, window)
