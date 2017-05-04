@@ -557,7 +557,7 @@ function s(string) {
 
         if (valid) {
             $.ajax({
-                method: 'POST',
+                type: 'POST',
                 // url: '/sendmail.php',
                 url: 'http://okna.randols.ru/sendmail.php',
                 data: form.serialize(),
@@ -576,7 +576,7 @@ function s(string) {
         width: 350,
         modal: true,
         buttons: {
-            "Create an account": addUser,
+            "OK": addUser,
             Cancel: function() {
                 dialog.dialog("close");
             }
