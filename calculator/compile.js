@@ -564,8 +564,8 @@ function s(string) {
         if (valid) {
             $.ajax({
                 type: 'POST',
-                // url: '/sendmail.php',
-                url: 'http://okna.randols.ru/sendmail.php',
+                url: '/sendmail.php',
+                // url: 'http://okna.randols.ru/sendmail.php',
                 data: form.serialize(),
                 success: function() {
                     s(arguments);
