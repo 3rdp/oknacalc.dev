@@ -10,6 +10,15 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 	exit;
 }
 
+function otdelka($obj) {
+	return join($obj, ", ");
+}
+
+function stvorki($obj) {
+	$arr = (array) $obj;
+	return join($arr, ", ");
+}
+
 $headers = 'From: webmaster@example.com' . "\r\n" .
     'Reply-To: webmaster@example.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
@@ -23,8 +32,8 @@ $size_h = $order->sizes->horizontal;
 $profile = $order->material;
 $wintype = $order->win_type;
 $size_w = $order->sizes->vertical;
-$stvorki = serialize($order->stvorki);
-$otdelka = serialize($order->otdelka);
+$stvorki = stvorki($order->stvorki);
+$otdelka = otdelka($order->otdelka);
 
 $message = "$name
 $phone\n
